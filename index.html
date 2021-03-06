@@ -1,0 +1,516 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>PT. Haekal Multi Saraba / Landing Page</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" /> <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.8.0/dist/alpine.min.js" defer ></script> </head><body> <section
+    class="h-full w-full border-box  transition-all duration-500 linear bg-white"
+    >
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+        .btn-outline-header-2-1{
+            border: 1px solid #555B61;
+            color:#555B61;
+        }
+        .btn-outline-header-2-1:hover{
+            border: 1px solid #FF7C57;
+            color: #FF7C57;
+        }
+        .btn-outline-header-2-1:hover div path{
+          fill: #FF7C57;
+
+        }
+        .btn-fill-header-2-1{
+          border: 1px solid #FF7C57;
+        }
+        .navigation-header-2-1 a:hover,
+        .active::after {
+         font-weight:600;
+        }
+    </style>
+    <section>
+        <!-- Navbar -->
+        <div style="font-family: 'Poppins', sans-serif;">
+        <header
+        x-data="{ open: false }">
+          <div class="mx-auto flex py-12 lg:px-24 md:px-16 sm:px-8 px-8  items-center justify-between lg:justify-start">
+            <!-- Gambar Pojok Atas Kiri -->
+            <a href="#">
+              <img src="img\HMSLOGO.png" alt="" height="80px" width="80px">
+            </a>
+            <!--  -->
+            <div class="flex mr-0 lg:hidden cursor-pointer">
+              <svg
+                class="w-6 h-6"
+                @click="open = !open"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                ></path>
+              </svg>
+            </div>
+            <div
+            :class="{'hidden': !open}"
+            class="bg-black fixed w-full hidden h-full top-0 left-0 z-30 bg-opacity-60"
+            @click="open = !open">
+            </div>
+            <nav class="navigation-header-2-1 lg:mr-auto hidden lg:flex flex-col text-base justify-center z-50 fixed top-8 left-3 right-3 p-8 rounded-md shadow-md bg-white lg:flex lg:flex-row lg:relative lg:top-0 lg:shadow-none lg:bg-transparent lg:p-0 lg:items-center items-start"
+            :class="{'flex': open, 'hidden': !open}"
+            >
+              <a href="#">                
+                <img class="m-0 lg:hidden mb-3" src="http://api.elements.buildwithangga.com/storage/files/2/assets/Header/Header2/Header-2-2.png" alt="">
+              </a>
+              <a class=" text-lg font-semibold leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative active"
+              style="color: #1d1e3c; font-family: 'Poppins', sans-serif;" href="#">Home</a>
+              <!-- <a class=" text-lg font-light leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative"
+              style="color: #1d1e3c; font-family: 'Poppins', sans-serif;" href="#">Product</a> -->
+              <a class=" text-lg font-light leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative"
+                style="color: #1d1e3c; font-family: 'Poppins', sans-serif;" href="#">About Us</a>
+              <a class=" text-lg font-light leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative"
+                style="color: #1d1e3c; font-family: 'Poppins', sans-serif;" href="#">Career ( Coming Soon )</a>
+              <a class=" text-lg font-light leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative"
+                style="color: #1d1e3c; font-family: 'Poppins', sans-serif;" href="#">Contact Us</a>
+              <a class=" text-lg font-light leading-6 mx-0 lg:mx-5 my-4 lg:my-0 relative"
+                style="color: #1d1e3c; font-family: 'Poppins', sans-serif;" href="dashboard.html">Admin</a>
+              <div class="flex items-center justify-end w-full lg:hidden mt-3">
+                <button
+                  class=" text-black font-light py-3 px-8 focus:outline-none" style="color: #1D1E3C; font-family: 'Poppins', sans-serif;">
+                  Log In
+                </button>
+                <!-- <button
+                  class=" text-white  text-lg py-3 px-8 rounded-xl focus:outline-none hover:shadow-lg  font-semibold"
+                  style="background: #FF7C57; font-family: 'Poppins', sans-serif;"
+                >
+                  Try Now
+                </button> -->
+              </div>
+              <svg
+                @click="open = !open"
+                class="w-6 h-6 absolute top-4 right-4  lg:hidden cursor-pointer"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </nav>
+            <div class="hidden lg:inline-flex">
+              <button class="inline-flex text-black font-light text-lg leading-7 py-3 px-8 focus:outline-none" style="color:#1D1E3C; font-family: 'Poppins', sans-serif;">Log In
+              </button>
+              <!-- <button class="inline-flex text-white text-lg leading-7 py-3 px-8 rounded-xl focus:outline-none hover:shadow-lg  font-semibold"
+              style="background: #FF7C57; font-family: 'Poppins', sans-serif;">Try Now
+              </button> -->
+            </div>
+          </div>
+        </header>
+
+        <!-- Hero-header-2-1 -->
+        <div>
+          <div class="mx-auto flex pt-12 pb-16 lg:pb-20 lg:px-24 md:px-16 sm:px-8 px-8  lg:flex-row flex-col">
+            <!-- Left Column -->
+            <div class="lg:flex-grow lg:w-1/2 flex flex-col lg:items-start lg:text-left mb-3 md:mb-12 lg:mb-0 items-center text-center">
+              <!-- <p class="mb-8 leading-relaxed font-semibold text-sm"
+              style="color: #FF7C57;">FREE 30 DAY TRIAL</p> -->
+              <h1 class="lg:block hidden title-font sm:text-5xl lg:text-6xl text-4xl mb-8 font-semibold sm:leading-tight "
+              style="color: #272E35; line-height: 1.2;">Put your coal in a professional place, only at <br>PT. Haekal Multi Saraba
+              </h1>
+              <h1 class="lg:hidden block title-font sm:text-5xl lg:text-6xl text-4xl mb-8 lg::px-10 md:px-10 sm:px-6 px-0 font-semibold sm:leading-tight "
+              style="color: #272E35; line-height: 1.2;">Put your coal in a professional place, only at <br>PT. Haekal Multi Saraba  
+              </h1>
+              <div class="inline-block items-center mx-auto lg:mx-0 lg:flex justify-center lg:space-x-8 md:space-x-2  sm:space-x-3 space-x-0">
+                <button class="btn-fill-header-2-1 inline-flex font-semibold text-white  text-base py-4 px-6 rounded-xl mb-4 lg:mb-0 md:mb-0 focus:outline-none hover:shadow-lg"
+                style="background: #FF7C57; font-family: 'Poppins', sans-serif;">More Detail .. </button>
+                <!-- <button class="btn-outline-header-2-1 font-normal text-black text-base py-4 px-6 rounded-xl focus:outline-none bg-transparent rounded hover:border-transparent" style="font-family: 'Poppins', sans-serif;">
+                  <div class="flex items-center">
+                    <svg class="mr-2.5" width="13" height="12" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M10.9293 7.99988L6.66668 5.15788V10.8419L10.9293 7.99988ZM12.9173 8.27722L5.85134 12.9879C5.80115 13.0213 5.74283 13.0404 5.6826 13.0433C5.62238 13.0462 5.5625 13.0327 5.50934 13.0042C5.45619 12.9758 5.41175 12.9334 5.38075 12.8817C5.34976 12.83 5.33337 12.7708 5.33334 12.7105V3.28922C5.33337 3.22892 5.34976 3.16976 5.38075 3.11804C5.41175 3.06633 5.45619 3.02398 5.50934 2.99552C5.5625 2.96706 5.62238 2.95355 5.6826 2.95644C5.74283 2.95932 5.80115 2.97848 5.85134 3.01188L12.9173 7.72255C12.963 7.75299 13.0004 7.79423 13.0263 7.84261C13.0522 7.89099 13.0658 7.94501 13.0658 7.99988C13.0658 8.05475 13.0522 8.10878 13.0263 8.15716C13.0004 8.20553 12.963 8.24678 12.9173 8.27722Z" fill="#555B61"/>
+                    </svg>                        
+                    Watch the video
+                </div>
+                </button> -->
+                
+              </div>
+            </div>
+            <!-- Right Column -->
+            <div class="w-full lg:w-1/2 text-center justify-center flex pr-0">
+              <img src="img\HMSLOGO.png" alt="" height="100px" width="600px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="h-full w-full px-8 py-20 bg-white">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            .circle-content-3-1{
+                background-color: #FFBF56;
+            }
+            .title-content-3-1{
+                color: #121212;
+            }
+            .caption-content-3-1{
+                color:  #565656;
+            }
+            .btn-fill-content-3-1{
+                background-color: #FF7C57;
+                transition: 0.3s;
+            }
+            .btn-fill-content-3-1:hover{
+                background-color: #FF9779;
+                transition: 0.3s;
+            }
+        </style>
+            <div class="flex lg:flex-row flex-col items-center" style="font-family: 'Poppins', sans-serif;">
+                <!-- Left Column -->
+                <div class="w-full lg:w-1/2 text-center justify-center flex lg:mb-0 mb-12">
+                    <img id="hero-content-3-1" src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content3/Content-3-1.png" alt="">
+                </div>
+                <!-- Right Column -->
+                <div class="lg:w-1/2 w-full flex flex-col lg:items-start items-center lg:text-left text-center">
+                <h2 class="md:text-4xl text-3xl font-semibold mb-10 tracking-tight" style="color: #121212;">Kelebihan Bermitra Dengan Kami :</h2>
+                <ul>
+                    <!-- <li class="mb-8">
+                    <h4 class="font-medium text-2xl mb-5 flex lg:flex-row flex-col items-center lg:justify-start justify-center title-content-3-1">
+                        <span
+                        class="circle-content-3-1 h-12 w-12 text-xl flex items-center justify-center lg:mr-5 lg:mb-0 mb-5 text-white rounded-full"
+                        >1</span
+                        >
+                        Tracking
+                    </h4>
+                    <p class="text-base leading-7 tracking-wide sm:inline-block hidden caption-content-3-1">
+                        Anda bisa melacak lokasi Coal anda dari manapun !<br>
+                        Kita mempunyai Menu untuk melihat bagaimana kondisi Coal anda saat ini.
+                    </p>
+                    <p class="text-base leading-7 tracking-wide inline-block sm:hidden caption-content-3-1">
+                      Anda bisa melacak lokasi Coal anda dari manapun !<br>
+                      Kita mempunyai Menu untuk melihat bagaimana kondisi Coal anda saat ini.
+                    </p>
+                    </li> -->
+                    <li class="mb-8">
+                    <h4 class="font-medium text-2xl mb-5 flex lg:flex-row flex-col items-center lg:justify-start justify-center title-content-3-1">
+                        <span
+                        class="circle-content-3-1 h-12 w-12 text-xl flex items-center justify-center lg:mr-5 lg:mb-0 mb-5 text-white rounded-full"
+                        >1</span
+                        >
+                        Service
+                    </h4>
+                    <p class="text-base leading-7 tracking-wide sm:inline-block hidden caption-content-3-1">
+                        Kita melayani sesuai dengan apa yang anda mau ! <br>
+                        Seperti mengikuti kemauan atau kebutuhan anda / Shipper .
+                    </p>
+                    <p class="text-base leading-7 tracking-wide inline-block sm:hidden caption-content-3-1">
+                        Kita melayani sesuai dengan apa yang anda mau ! <br>
+                        Seperti mengikuti kemauan atau kebutuhan anda / Shipper .
+                    </p>
+                    </li>
+                    <!-- <li class="mb-16">
+                    <h4 class="font-medium text-2xl mb-5 flex lg:flex-row flex-col items-center lg:justify-start justify-center title-content-3-1">
+                        <span
+                        class="circle-content-3-1 h-12 w-12 text-xl flex items-center justify-center lg:mr-5 lg:mb-0 mb-5 text-white rounded-full"
+                        >3</span
+                        >
+                        Halfpenny
+                    </h4>
+                    <p class="text-base leading-7 tracking-wide sm:inline-block hidden caption-content-3-1">
+                        We provide economical packages for those of you<br>
+                        who are still in school or workers.
+                    </p>
+                    <p class="text-base leading-7 tracking-wide inline-block sm:hidden caption-content-3-1">
+                        We provide economical packages for those of you
+                        who are still in school or workers.
+                    </p>
+                    </li> -->
+                </ul>
+                <!-- <button
+                    class="btn-fill-content-3-1 px-10 py-4 text-base text-white font-semibold rounded-xl cursor-pointer focus:outline-none tracking-wide"
+                >
+                    Learn More
+                </button> -->
+                </div>
+            </div>    
+    </section>
+    <section class="h-full w-full px-8 py-20 bg-white">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            .circle-content-3-1{
+                background-color: #FFBF56;
+            }
+            .title-content-3-1{
+                color: #121212;
+            }
+            .caption-content-3-1{
+                color:  #565656;
+            }
+            .btn-fill-content-3-1{
+                background-color: #FF7C57;
+                transition: 0.3s;
+            }
+            .btn-fill-content-3-1:hover{
+                background-color: #FF9779;
+                transition: 0.3s;
+            }
+        </style>
+            <div class="flex lg:flex-row flex-col items-center" style="font-family: 'Poppins', sans-serif;">
+                <!-- Left Column -->
+                <div class="w-full lg:w-1/2 text-center justify-center flex lg:mb-0 mb-12">
+                    <img id="hero-content-3-1" src="http://api.elements.buildwithangga.com/storage/files/2/assets/Content/Content3/Content-3-1.png" alt="">
+                </div>
+                <!-- Right Column -->
+                <div class="lg:w-1/2 w-full flex flex-col lg:items-start items-center lg:text-left text-center">
+                <h2 class="md:text-4xl text-3xl font-semibold mb-10 tracking-tight" style="color: #121212;">Kelebihan Bermitra Dengan Kami :</h2>
+                <ul>
+                    <!-- <li class="mb-8">
+                    <h4 class="font-medium text-2xl mb-5 flex lg:flex-row flex-col items-center lg:justify-start justify-center title-content-3-1">
+                        <span
+                        class="circle-content-3-1 h-12 w-12 text-xl flex items-center justify-center lg:mr-5 lg:mb-0 mb-5 text-white rounded-full"
+                        >1</span
+                        >
+                        Tracking
+                    </h4>
+                    <p class="text-base leading-7 tracking-wide sm:inline-block hidden caption-content-3-1">
+                        Anda bisa melacak lokasi Coal anda dari manapun !<br>
+                        Kita mempunyai Menu untuk melihat bagaimana kondisi Coal anda saat ini.
+                    </p>
+                    <p class="text-base leading-7 tracking-wide inline-block sm:hidden caption-content-3-1">
+                      Anda bisa melacak lokasi Coal anda dari manapun !<br>
+                      Kita mempunyai Menu untuk melihat bagaimana kondisi Coal anda saat ini.
+                    </p>
+                    </li> -->
+                    <li class="mb-8">
+                    <h4 class="font-medium text-2xl mb-5 flex lg:flex-row flex-col items-center lg:justify-start justify-center title-content-3-1">
+                        <span
+                        class="circle-content-3-1 h-12 w-12 text-xl flex items-center justify-center lg:mr-5 lg:mb-0 mb-5 text-white rounded-full"
+                        >1</span
+                        >
+                        Service
+                    </h4>
+                    <p class="text-base leading-7 tracking-wide sm:inline-block hidden caption-content-3-1">
+                        Kita melayani sesuai dengan apa yang anda mau ! <br>
+                        Seperti mengikuti kemauan atau kebutuhan anda / Shipper .
+                    </p>
+                    <p class="text-base leading-7 tracking-wide inline-block sm:hidden caption-content-3-1">
+                        Kita melayani sesuai dengan apa yang anda mau ! <br>
+                        Seperti mengikuti kemauan atau kebutuhan anda / Shipper .
+                    </p>
+                    </li>
+                    <!-- <li class="mb-16">
+                    <h4 class="font-medium text-2xl mb-5 flex lg:flex-row flex-col items-center lg:justify-start justify-center title-content-3-1">
+                        <span
+                        class="circle-content-3-1 h-12 w-12 text-xl flex items-center justify-center lg:mr-5 lg:mb-0 mb-5 text-white rounded-full"
+                        >3</span
+                        >
+                        Halfpenny
+                    </h4>
+                    <p class="text-base leading-7 tracking-wide sm:inline-block hidden caption-content-3-1">
+                        We provide economical packages for those of you<br>
+                        who are still in school or workers.
+                    </p>
+                    <p class="text-base leading-7 tracking-wide inline-block sm:hidden caption-content-3-1">
+                        We provide economical packages for those of you
+                        who are still in school or workers.
+                    </p>
+                    </li> -->
+                </ul>
+                <!-- <button
+                    class="btn-fill-content-3-1 px-10 py-4 text-base text-white font-semibold rounded-xl cursor-pointer focus:outline-none tracking-wide"
+                >
+                    Learn More
+                </button> -->
+                </div>
+            </div>    
+    </section>
+    <section class="h-full w-full px-8 py-20 bg-white">
+      <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+          .circle-content-3-1{
+              background-color: #FFBF56;
+          }
+          .title-content-3-1{
+              color: #121212;
+          }
+          .caption-content-3-1{
+              color:  #565656;
+          }
+          .btn-fill-content-3-1{
+              background-color: #FF7C57;
+              transition: 0.3s;
+          }
+          .btn-fill-content-3-1:hover{
+              background-color: #FF9779;
+              transition: 0.3s;
+          }
+
+          .fa {
+            padding: 20px;
+            font-size: 30px;
+            width: 50px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+          }
+
+          .fa:hover {
+              opacity: 0.7;
+          }
+
+          .fa-facebook {
+            background: #3B5998;
+            color: white;
+          }
+
+          .fa-twitter {
+            background: #55ACEE;
+            color: white;
+          }
+
+          .fa-google {
+            background: #dd4b39;
+            color: white;
+          }
+
+          .fa-linkedin {
+            background: #007bb5;
+            color: white;
+          }
+
+          .fa-youtube {
+            background: #bb0000;
+            color: white;
+          }
+
+          .fa-instagram {
+            background: #125688;
+            color: white;
+          }
+
+          .fa-pinterest {
+            background: #cb2027;
+            color: white;
+          }
+
+          .fa-snapchat-ghost {
+            background: #fffc00;
+            color: white;
+            text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+          }
+
+          .fa-skype {
+            background: #00aff0;
+            color: white;
+          }
+
+          .fa-android {
+            background: #a4c639;
+            color: white;
+          }
+
+          .fa-dribbble {
+            background: #ea4c89;
+            color: white;
+          }
+
+          .fa-vimeo {
+            background: #45bbff;
+            color: white;
+          }
+
+          .fa-tumblr {
+            background: #2c4762;
+            color: white;
+          }
+
+          .fa-vine {
+            background: #00b489;
+            color: white;
+          }
+
+          .fa-foursquare {
+            background: #45bbff;
+            color: white;
+          }
+
+          .fa-stumbleupon {
+            background: #eb4924;
+            color: white;
+          }
+
+          .fa-flickr {
+            background: #f40083;
+            color: white;
+          }
+
+          .fa-yahoo {
+            background: #430297;
+            color: white;
+          }
+
+          .fa-soundcloud {
+            background: #ff5500;
+            color: white;
+          }
+
+          .fa-reddit {
+            background: #ff5700;
+            color: white;
+          }
+
+          .fa-rss {
+            background: #ff6600;
+            color: white;
+          }
+      </style>
+          <div class="flex lg:flex-row flex-col items-center" style="font-family: 'Poppins', sans-serif;">
+            <!-- Left Column -->
+            <div class="w-full  text-center justify-center flex lg:mb-0 mb-12">
+              <h1 class="lg:block hidden title-font sm:text-5xl lg:text-6xl text-4xl mb-8 font-semibold sm:leading-tight "
+              style="color: #272E35; line-height: 1.2;">Berminat bermitra dengan kami ? Kontak di :
+              <br>
+              <a href="#" class="fa fa-google">Google Form</a>
+              <a href="#" class="fa fa-vine">Whatsapp Chat</a>
+              </h1>
+              <h1 class="lg:hidden block title-font sm:text-5xl lg:text-6xl text-4xl mb-8 lg::px-10 md:px-10 sm:px-6 px-0 font-semibold sm:leading-tight "
+              style="color: #272E35; line-height: 1.2;">Berminat bermitra dengan kami ? Kontak di : 
+              <br>
+              <br>
+              <a href="#" class="fa fa-google">Google Form</a>
+              <br>
+              <br>
+              
+              <a href="#" class="fa fa-vine">Whatsapp Chat</a>
+              </h1>
+            </div>
+        </div>    
+  </section>
+    <section class="h-full pt-20 pb-12 lg:px-24 md:px-16 sm:px-8 px-4 bg-white">
+        <style>
+          @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+          .list-footer-2-1 li a{
+              color: #C7C7C7;
+          }
+          .list-footer-2-1 li a:hover{
+              color: #555252;
+              cursor: pointer;
+          }
+          .border-color-footer-2-1{
+              color: #C7C7C7;
+          }
+          .footer-link-footer-2-1:hover{
+              color: #555252;
+              cursor: pointer;
+          }
+          .social-media-c-footer-2-1:hover circle, .social-media-p-footer-2-1:hover path{
+              fill: #555252;
+              cursor: pointer;
+          }
+        </style>    
+        
+    </section> </body></html>
